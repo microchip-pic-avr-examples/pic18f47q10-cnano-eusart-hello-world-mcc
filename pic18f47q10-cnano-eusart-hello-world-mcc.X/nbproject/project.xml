@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>pic18f47q10-cnano-hello-world-mcc</name>
+            <name>pic18f47q10-cnano-eusart-hello-world-mcc</name>
             <creation-uuid>6bc0a47f-c337-42a0-83fe-0325e2e8e170</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
