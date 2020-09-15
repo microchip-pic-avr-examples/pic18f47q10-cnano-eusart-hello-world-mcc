@@ -5,9 +5,9 @@
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f47q10-cnano-eusart-hello-world-mcc",
         "version": "1.0.1",
-        "displayName": "PIC18F47Q10 EUSART Sending \"Hello World\" message",
+        "displayName": "EUSART Sending Hello World message",
         "projectName": "pic18f47q10-cnano-eusart-hello-world-mcc",
-        "shortDescription": "In this example the EUSART is set in the most common configuration (asynchronous operation and 8N1 message format) and \"Hello World\" messages are transmitted. Data Visualizer is used to see the messages on the PC.",
+        "shortDescription": "In this example the EUSART is set in the most common configuration (asynchronous operation and 8N1 message format) and Hello World messages are transmitted. Data Visualizer is used to see the messages on the PC. The drivers for peripherals were generated using MCC.",
         "ide": {
             "name": "MPLAB X",
             "semverRange": ">=5.30"
@@ -49,8 +49,7 @@
         ],
         "keywords": [
             "Getting Started",
-            "Serial Communication",
-            "UART"
+            "Serial Communication"
         ],
         "additionalData": {
             "longDescription": {
