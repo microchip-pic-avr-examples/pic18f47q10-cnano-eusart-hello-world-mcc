@@ -10,7 +10,7 @@
         "shortDescription": "In this example the EUSART is set in the most common configuration (asynchronous operation and 8N1 message format) and Hello World messages are transmitted. Data Visualizer is used to see the messages on the PC. The drivers for peripherals were generated using MCC.",
         "ide": {
             "name": "MPLAB X",
-            "semverRange": ">=5.30"
+            "semverRange": ">=5.30.0"
         },
         "compiler": [
             {
