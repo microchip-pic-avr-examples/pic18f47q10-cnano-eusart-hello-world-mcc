@@ -13,11 +13,11 @@ This example shows how to send a string message from the PIC18F47Q10 microcontro
 
 ## Software Used
 
-- MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-- MPLAB® XC8 2.10 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-- MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-- MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-- Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/)
+- MPLAB® X IDE 5.45 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
+- MPLAB® XC8 2.31 or newer [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
+- MPLAB® Code Configurator (MCC) 4.1.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
+- MPLAB® Code Configurator Library 1.37.9 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
+- Microchip PIC18F-Q Series Device Support 1.8.154 or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/)
 
 ## Hardware Used
 
@@ -29,9 +29,21 @@ The PIC18F47Q10 Curiosity Nano Development Board [(DM182029)](https://www.microc
 
 The following configurations must be made for this project:
 
-| Pin | Configuration  |
-| :-: | :------------: |
-| RD0 | Digital Output |
+CLKCTRL: default
+
+EUSART2:
+- Transmit Enabled
+- Serial Port Enabled
+- Baud Rate: 9600
+
+Clock Control:
+- Clock Source: HFINTOSC
+- HF Internal Clock: 4_MHz
+- Clock Divider: 4
+
+Configuration Bits:
+- WDT Operating Mode: WDT Disabled
+
 
 ## Operation
 
