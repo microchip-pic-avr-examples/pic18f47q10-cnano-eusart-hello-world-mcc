@@ -1,3 +1,24 @@
+/**
+  @Generated CCL Header File
+
+  @Company:
+    Microchip Technology Inc.
+
+  @File Name:
+    clock.h
+
+  @Summary:
+    This is the clock.h file generated using CCL
+
+  @Description:
+    This header file provides implementations for driver APIs for all modules selected in the GUI.
+    Generation Information :
+        Driver Version    :  2.00
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 v2.20
+        MPLAB             :  MPLAB X 5.40
+*/
+
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
 
@@ -31,33 +52,17 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     third party licenses prohibit any of the restrictions described here, 
     such restrictions will not apply to such third party software.
 */
-#include "mcc_generated_files/system/system.h"
 
-#include <util/delay.h>
+#ifndef CLOCK_H
+#define	CLOCK_H
 
-void USART1_sendString(const char *str)
-{
-    while(*str)
-    {
-        while (!(USART1_IsTxReady()));
-        USART1_Write(*str++);
-    }
-}
-/*
-    Main application
-*/
-int main(void)
-{
-    /* Initializes MCU, drivers and middleware */
-    SYSTEM_Initialize();
+#ifndef _XTAL_FREQ
+#define _XTAL_FREQ 1000000
+#endif
 
-    /* Replace with your application code */
-    while (1){
-        
-        USART1_sendString("Hello World!\r\n");
-        _delay_ms(1000);
-    }
-}
+void CLOCK_Initialize(void);
+
+#endif	/* CLOCK_H */
 /**
-    End of File
+ End of File
 */

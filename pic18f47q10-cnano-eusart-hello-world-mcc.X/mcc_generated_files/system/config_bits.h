@@ -1,12 +1,24 @@
 /**
-  @Company
+  @Generated CCL Header File
+
+  @Company:
     Microchip Technology Inc.
 
-  @Description
-    This Source file provides APIs.
+  @File Name:
+    config_bits.h
+
+  @Summary:
+    This is the config_bits.h file generated using CCL
+
+  @Description:
+    This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-    Driver Version    :   1.0.0
+        Driver Version    :  2.00
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 v2.20
+        MPLAB             :  MPLAB X 5.40
 */
+
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
 
@@ -41,14 +53,12 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     such restrictions will not apply to such third party software.
 */
 
+#ifndef CONFIG_BITS_H
+#define	CONFIG_BITS_H
 
-#ifndef CLOCK_CONFIG_H
-#define CLOCK_CONFIG_H
+#include "../system/clock.h"
 
-#ifndef F_CPU
-#define F_CPU 4000000
-#endif
-
-void CLOCK_Initialize(void);
-
-#endif // CLOCK_CONFIG_H
+#endif	/* CONFIG_BITS_H */
+/**
+ End of File
+*/

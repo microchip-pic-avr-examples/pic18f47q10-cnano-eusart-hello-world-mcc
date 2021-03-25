@@ -1,12 +1,26 @@
 /**
+  EUSART2 Generated Driver API Header File
+
   @Company
     Microchip Technology Inc.
 
+  @File Name
+    eusart2_interface.h
+
+  @Summary
+    This is the generated driver interface header file for the EUSART2 driver.
+
   @Description
-    This Source file provides APIs.
+    This file provides common enumerations for EUSART2 driver.
     Generation Information :
-    Driver Version    :   1.0.0
+        Product Revision  :  CCL - 1.8.2
+        Device            :  PIC18F47Q43
+        Driver Version    :  1.0.0
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 v2.2
+        MPLAB             :  Standalone
 */
+
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
 
@@ -41,43 +55,36 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     such restrictions will not apply to such third party software.
 */
 
-
+#ifndef UART_INTERFACE_H
+#define UART_INTERFACE_H
 /**
- * \defgroup doc_driver_utils_assert Functionality for assert.
- * \ingroup doc_driver_utils
- *
- * \{
- */
-
-#ifndef _ASSERT_H_INCLUDED
-#define _ASSERT_H_INCLUDED
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
+  Section: Included Files
+*/
 #include <stdbool.h>
-
+#include <stdint.h>
+#include <xc.h>
+    
 /**
- * \brief Assert macro
- *
- * This macro is used to throw asserts. It can be mapped to different function
- * based on debug level.
- *
- * \param[in] condition A condition to be checked;
- *                      assert is thrown if the given condition is false
+  UART_INTERFACE
+
+  @Description
+    Structure containing the function pointers of EUSART2 driver.
  */
+struct UART_INTERFACE
+{   
+    void (*Initialize)(void);
+    uint8_t (*Read)(void);
+    void (*Write)(uint8_t);
+    void (*RxCompleteCallbackRegister)(void (*CallbackHandler));
+    void (*TxCompleteCallbackRegister)(void (*CallbackHandler));
+    void (*ErrorCallbackRegister)(void (*CallbackHandler)(void));
+    void (*FramingErrorCallbackRegister)(void (*CallbackHandler)(void));
+    void (*OverrunErrorCallbackRegister)(void (*CallbackHandler)(void));
+    void (*ParityErrorCallbackRegister)(void (*CallbackHandler));
+    void (*ChecksumErrorCallbackRegister)(void (*CallbackHandler));
+    bool (*IsRxReady)(void);
+    bool (*IsTxReady)(void);
+    bool (*IsTxDone)(void);
+};
 
-#ifdef DEBUG
-#define ASSERT(condition)                                                                                              \
-	if (!(condition))                                                                                                  \
-		while (true)                                                                                                   \
-			;
-#else
-#define ASSERT(condition) ((void)0)
-#endif
-
-#ifdef __cplusplus
-}
-#endif
-#endif /* _ASSERT_H_INCLUDED */
+#endif // end of UART_INTERFACE_H

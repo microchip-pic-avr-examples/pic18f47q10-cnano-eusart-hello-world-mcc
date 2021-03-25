@@ -1,12 +1,24 @@
 /**
-  @Company
+  @Generated CCL Header File
+
+  @Company:
     Microchip Technology Inc.
 
-  @Description
-    This Source file provides APIs.
+  @File Name:
+    system.h
+
+  @Summary:
+    This is the system.h file generated using CCL
+
+  @Description:
+    This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-    Driver Version    :   1.0.0
+        Driver Version    :  2.00
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 v2.20
+        MPLAB             :  MPLAB X 5.40
 */
+
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
 
@@ -41,71 +53,32 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     such restrictions will not apply to such third party software.
 */
 
+#ifndef SYSTEM_H
+#define	SYSTEM_H
+#include <xc.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <conio.h>
+#include "config_bits.h"
+#include "../system/interrupt.h"
+#include "../system/clock.h"
+#include "../uart/eusart2.h"
+#include "../system/pins.h"
 
 /**
- * \defgroup doc_driver_utils_interrupts ISR abstraction
- * \ingroup doc_driver_utils
- *
- * Interrupt-related functionality.
- *
- * \{
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Initializes the device to the default states configured in the
+ *                  MCC GUI
+ * @Example
+    SYSTEM_Initialize(void);
  */
+void SYSTEM_Initialize(void);
 
-#ifndef UTILS_INTERRUPT_AVR8_H
-#define UTILS_INTERRUPT_AVR8_H
-
+#endif	/* SYSTEM_H */
 /**
- * \weakgroup interrupt_group
- *
- * @{
- */
-
-#ifdef ISR_CUSTOM_H
-#include ISR_CUSTOM_H
-#else
-
-/**
- * \def ISR
- * \brief Define service routine for specified interrupt vector
- *
- * Usage:
- * \code
-    ISR(FOO_vect)
-    {
-        ...
-    }
-\endcode
- *
- * \param vect Interrupt vector name as found in the device header files.
- */
-#if defined(__DOXYGEN__)
-#define ISR(vect)
-#elif defined(__GNUC__)
-#include <avr/interrupt.h>
-#elif defined(__ICCAVR__)
-#define __ISR(x) _Pragma(#x)
-#define ISR(vect) __ISR(vector = vect) __interrupt void handler_##vect(void)
-#endif
-#endif // ISR_CUSTOM_H
-
-#ifdef __GNUC__
-#define cpu_irq_enable() sei()
-#define cpu_irq_disable() cli()
-#else
-#define cpu_irq_enable() __enable_interrupt()
-#define cpu_irq_disable() __disable_interrupt()
-#endif
-
-//! @}
-
-/**
- * \weakgroup interrupt_deprecated_group
- * @{
- */
-// Deprecated definitions.
-#define Enable_global_interrupt() cpu_irq_enable()
-#define Disable_global_interrupt() cpu_irq_disable()
-#define Is_global_interrupt_enabled() cpu_irq_is_enabled()
-//! @}
-
-#endif /* UTILS_INTERRUPT_AVR8_H */
+ End of File
+*/

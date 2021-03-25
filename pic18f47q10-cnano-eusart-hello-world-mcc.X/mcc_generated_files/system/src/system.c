@@ -1,12 +1,24 @@
 /**
-  @Company
+  @Generated CCL Source File
+
+  @Company:
     Microchip Technology Inc.
 
-  @Description
-    This Source file provides APIs.
+  @File Name:
+    system.c
+
+  @Summary:
+    This is the system.c file generated using CCL
+
+  @Description:
+    This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-    Driver Version    :   1.0.0
+        Driver Version    :  2.00
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 v2.20
+        MPLAB             :  MPLAB X 5.40
 */
+
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
 
@@ -41,25 +53,17 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     such restrictions will not apply to such third party software.
 */
 
-
-#include "../interrupt.h"
-
-/**
- * \brief Initialize cpuint interface
+ /**
+   Section: Included Files
  */
-int8_t CPUINT_Initialize()
+#include "../system.h"
+
+
+void SYSTEM_Initialize(void)
 {
-    /* IVSEL and CVT are Configuration Change Protected */
-
-    //CVT disabled; IVSEL disabled; LVL0RR disabled; 
-    ccp_write_io((void*)&(CPUINT.CTRLA),0x0);
-    
-    //LVL0PRI 0; 
-    CPUINT.LVL0PRI = 0x0;
-    
-    //LVL1VEC 0; 
-    CPUINT.LVL1VEC = 0x0;
-
-        
-    return 0;
+    INTERRUPT_Initialize();
+    CLOCK_Initialize();
+    EUSART2_Initialize();
+    PIN_MANAGER_Initialize();
 }
+

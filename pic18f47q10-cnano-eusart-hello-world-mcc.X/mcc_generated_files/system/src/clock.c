@@ -1,12 +1,24 @@
 /**
-  @Company
+  @Generated CLOCK CONTROL Source File
+
+  @Company:
     Microchip Technology Inc.
 
-  @Description
-    This Source file provides APIs.
+  @File Name:
+    clock.c
+
+  @Summary:
+    This is the clock.c file generated using CCL
+
+  @Description:
+    This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-    Driver Version    :   1.0.0
+        Driver Version    :  2.00
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 v2.20
+        MPLAB             :  MPLAB X 5.40
 */
+
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
 
@@ -41,20 +53,27 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     such restrictions will not apply to such third party software.
 */
 
+#include <xc.h>
+#include "../clock.h"
 
-#ifndef ASSEMBLER_H_INCLUDED
-#define ASSEMBLER_H_INCLUDED
-
-#if !defined(__ASSEMBLER__) && !defined(__IAR_SYSTEMS_ASM__) && !defined(__DOXYGEN__)
-#error This file may only be included from assembly files
-#endif
-
-#if defined(__ASSEMBLER__)
-#include "assembler/gas.h"
-#include <avr/io.h>
-#elif defined(__IAR_SYSTEMS_ASM__)
-#include "assembler/iar.h"
-#include <ioavr.h>
-#endif
-
-#endif /* ASSEMBLER_H_INCLUDED */
+void CLOCK_Initialize(void)
+{
+    // Set the CLOCK CONTROL module to the options selected in the user interface.
+    // NDIV 4; NOSC HFINTOSC; 
+    OSCCON1 = 0x62;
+    // 
+    OSCCON2 = 0x70;
+    // SOSCPWR Low power; CSWHOLD may proceed; 
+    OSCCON3 = 0x0;
+    // EXTOEN disabled; HFOEN disabled; MFOEN disabled; LFOEN disabled; SOSCEN disabled; ADOEN disabled; 
+    OSCEN = 0x0;
+    // HFFRQ 4_MHz; 
+    OSCFRQ = 0x2;
+    // 
+    OSCSTAT = 0x0;
+    // TUN undefined; 
+    OSCTUNE = 0x0;
+}
+/**
+ End of File
+*/
