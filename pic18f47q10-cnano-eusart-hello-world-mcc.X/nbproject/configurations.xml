@@ -8,15 +8,16 @@
                      displayName="MCC Generated Files"
                      projectFiles="true">
         <logicalFolder name="system" displayName="system" projectFiles="true">
-          <itemPath>mcc_generated_files/system/clock.h</itemPath>
-          <itemPath>mcc_generated_files/system/config_bits.h</itemPath>
-          <itemPath>mcc_generated_files/system/pins.h</itemPath>
           <itemPath>mcc_generated_files/system/interrupt.h</itemPath>
+          <itemPath>mcc_generated_files/system/config_bits.h</itemPath>
           <itemPath>mcc_generated_files/system/system.h</itemPath>
+          <itemPath>mcc_generated_files/system/clock.h</itemPath>
+          <itemPath>mcc_generated_files/system/pins.h</itemPath>
         </logicalFolder>
         <logicalFolder name="uart" displayName="uart" projectFiles="true">
+          <itemPath>mcc_generated_files/uart/uart_types.h</itemPath>
+          <itemPath>mcc_generated_files/uart/uart_drv_interface.h</itemPath>
           <itemPath>mcc_generated_files/uart/eusart2.h</itemPath>
-          <itemPath>mcc_generated_files/uart/uart_interface.h</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -32,11 +33,11 @@
                      projectFiles="true">
         <logicalFolder name="system" displayName="system" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/system/src/config_bits.c</itemPath>
             <itemPath>mcc_generated_files/system/src/clock.c</itemPath>
+            <itemPath>mcc_generated_files/system/src/config_bits.c</itemPath>
             <itemPath>mcc_generated_files/system/src/system.c</itemPath>
-            <itemPath>mcc_generated_files/system/src/pins.c</itemPath>
             <itemPath>mcc_generated_files/system/src/interrupt.c</itemPath>
+            <itemPath>mcc_generated_files/system/src/pins.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="uart" displayName="uart" projectFiles="true">
@@ -64,11 +65,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.31</languageToolchainVersion>
+        <languageToolchainVersion>2.40</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.8.154"/>
+        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.15.360"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -104,7 +105,7 @@
         <property key="default-bitfield-type" value="true"/>
         <property key="default-char-type" value="true"/>
         <property key="define-macros" value=""/>
-        <property key="disable-optimizations" value="false"/>
+        <property key="disable-optimizations" value="true"/>
         <property key="extra-include-directories" value=""/>
         <property key="favor-optimization-for" value="-speed,+space"/>
         <property key="garbage-collect-data" value="true"/>
@@ -114,16 +115,16 @@
         <property key="operation-mode" value="free"/>
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>
         <property key="optimization-assembler" value="true"/>
-        <property key="optimization-assembler-files" value="false"/>
+        <property key="optimization-assembler-files" value="true"/>
         <property key="optimization-debug" value="false"/>
         <property key="optimization-invariant-enable" value="false"/>
         <property key="optimization-invariant-value" value="16"/>
-        <property key="optimization-level" value="-O1"/>
+        <property key="optimization-level" value="-O0"/>
         <property key="optimization-speed" value="false"/>
         <property key="optimization-stable-enable" value="false"/>
-        <property key="pack-struct" value="true"/>
         <property key="preprocess-assembler" value="true"/>
         <property key="short-enums" value="true"/>
+        <property key="tentative-definitions" value="-fno-common"/>
         <property key="undefine-macros" value=""/>
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
@@ -179,15 +180,19 @@
       </HI-TECH-LINK>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </XC8-CO>
       <XC8-config-global>
         <property key="advanced-elf" value="true"/>
+        <property key="constdata-progmem" value="true"/>
         <property key="gcc-opt-driver-new" value="true"/>
         <property key="gcc-opt-std" value="-std=c99"/>
         <property key="gcc-output-file-format" value="dwarf-3"/>
+        <property key="mapped-progmem" value="false"/>
         <property key="omit-pack-options" value="false"/>
         <property key="omit-pack-options-new" value="1"/>
         <property key="output-file-format" value="-mcof,+elf"/>
+        <property key="smart-io-format" value=""/>
         <property key="stack-size-high" value="auto"/>
         <property key="stack-size-low" value="auto"/>
         <property key="stack-size-main" value="auto"/>
@@ -195,6 +200,75 @@
         <property key="user-pack-device-support" value=""/>
         <property key="wpo-lto" value="false"/>
       </XC8-config-global>
+      <nEdbgTool>
+        <property key="Instructiontrace.is.present" value="false"/>
+        <property key="arm.selected" value="false"/>
+        <property key="can.run.timers.while.stopped" value="false"/>
+        <property key="can.supply.power" value="true"/>
+        <property key="communication.has.no.atdf" value="true"/>
+        <property key="communication.interface.has.avr32jtag" value="false"/>
+        <property key="communication.interface.has.dw" value="false"/>
+        <property key="communication.interface.has.hvpp" value="false"/>
+        <property key="communication.interface.has.hvsp" value="false"/>
+        <property key="communication.interface.has.isp" value="false"/>
+        <property key="communication.interface.has.megajtag" value="false"/>
+        <property key="communication.interface.has.no.clock" value="true"/>
+        <property key="communication.interface.has.pdi" value="false"/>
+        <property key="communication.interface.has.samjtag" value="false"/>
+        <property key="communication.interface.has.swd" value="false"/>
+        <property key="communication.interface.has.tpi" value="false"/>
+        <property key="communication.interface.has.updi" value="false"/>
+        <property key="communication.interface.has.xmegajtag" value="false"/>
+        <property key="daytona.hastrace" value="false"/>
+        <property key="firmwarepage.supporttoolpacks" value="true"/>
+        <property key="has.risky.configs" value="false"/>
+        <property key="hasSecureSegment" value="false"/>
+        <property key="hwtoolclock.show.instruction.speed" value="true"/>
+        <property key="hwtoolclock.show.tab" value="true"/>
+        <property key="hwtoolclock.supportsfrc" value="false"/>
+        <property key="instrumentedtrace.hastrace" value="true"/>
+        <property key="isHighVoltageMCLRSupported" value="true"/>
+        <property key="isSWBPSupported" value="false"/>
+        <property key="isSimultaneousDebugSupported" value="false"/>
+        <property key="memories.always.autoselect" value="false"/>
+        <property key="memories.aux.exists" value="false"/>
+        <property key="memories.bootflash.exists" value="false"/>
+        <property key="memories.calmem.exists" value="false"/>
+        <property key="memories.canpreserve.dataflash" value="false"/>
+        <property key="memories.configurationmemory.exists" value="true"/>
+        <property key="memories.configurationmemory2.exists" value="false"/>
+        <property key="memories.dataflash.exists" value="false"/>
+        <property key="memories.eedata.default" value="310000-3103ff"/>
+        <property key="memories.eeprom.boundary" value="0x1"/>
+        <property key="memories.eeprom.exists" value="true"/>
+        <property key="memories.flashdata.exists" value="false"/>
+        <property key="memories.id.exists" value="true"/>
+        <property key="memories.otpconfigs.exists" value="false"/>
+        <property key="memories.programmemory.boundary" value="0x1"/>
+        <property key="memories.programmemory.end.value" value="0x1ffff"/>
+        <property key="memories.programmemory.partition2.exists" value="false"/>
+        <property key="memories.programmemory.range.string" value="0-1ffff"/>
+        <property key="memories.programmemory.ranges.default" value="0-1ffff"/>
+        <property key="memories.programmemory.show" value="true"/>
+        <property key="memories.programmemory.start.value" value="0x0"/>
+        <property key="memories.rww.exists" value="false"/>
+        <property key="memories.show.bootflash" value="false"/>
+        <property key="memories.userotp.exists" value="false"/>
+        <property key="poweroptions.DefaultPower" value="5.0"/>
+        <property key="poweroptions.voltagevalue.max" value="5.5"/>
+        <property key="poweroptions.voltagevalue.min" value="1.8"/>
+        <property key="programmerToGoDefaultImageName"
+                  value="pic18f47q10-cnano-eusart-hello-world-mcc_ptg"/>
+        <property key="programoptions.canpreserve.pgm" value="true"/>
+        <property key="programoptions.hashvp" value="true"/>
+        <property key="programoptions.haslvp" value="true"/>
+        <property key="programoptions.hasvppfirst" value="true"/>
+        <property key="programoptions.musterase" value="false"/>
+        <property key="programoptions.onevoltageoption" value="false"/>
+        <property key="programoptions.pgmentry.default" value="high"/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="supportsFreeze" value="true"/>
+      </nEdbgTool>
     </conf>
     <conf name="pro" type="2">
       <toolsSet>
@@ -204,11 +278,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.31</languageToolchainVersion>
+        <languageToolchainVersion>2.40</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.8.154"/>
+        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.15.360"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -254,16 +328,16 @@
         <property key="operation-mode" value="pro"/>
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>
         <property key="optimization-assembler" value="true"/>
-        <property key="optimization-assembler-files" value="false"/>
+        <property key="optimization-assembler-files" value="true"/>
         <property key="optimization-debug" value="false"/>
         <property key="optimization-invariant-enable" value="false"/>
         <property key="optimization-invariant-value" value="16"/>
-        <property key="optimization-level" value="-O3"/>
-        <property key="optimization-speed" value="true"/>
+        <property key="optimization-level" value="-Os"/>
+        <property key="optimization-speed" value="false"/>
         <property key="optimization-stable-enable" value="false"/>
-        <property key="pack-struct" value="true"/>
         <property key="preprocess-assembler" value="true"/>
         <property key="short-enums" value="true"/>
+        <property key="tentative-definitions" value="-fno-common"/>
         <property key="undefine-macros" value=""/>
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
@@ -319,15 +393,19 @@
       </HI-TECH-LINK>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </XC8-CO>
       <XC8-config-global>
         <property key="advanced-elf" value="true"/>
+        <property key="constdata-progmem" value="true"/>
         <property key="gcc-opt-driver-new" value="true"/>
         <property key="gcc-opt-std" value="-std=c99"/>
         <property key="gcc-output-file-format" value="dwarf-3"/>
+        <property key="mapped-progmem" value="false"/>
         <property key="omit-pack-options" value="false"/>
         <property key="omit-pack-options-new" value="1"/>
         <property key="output-file-format" value="-mcof,+elf"/>
+        <property key="smart-io-format" value=""/>
         <property key="stack-size-high" value="auto"/>
         <property key="stack-size-low" value="auto"/>
         <property key="stack-size-main" value="auto"/>
@@ -335,6 +413,75 @@
         <property key="user-pack-device-support" value=""/>
         <property key="wpo-lto" value="false"/>
       </XC8-config-global>
+      <nEdbgTool>
+        <property key="Instructiontrace.is.present" value="false"/>
+        <property key="arm.selected" value="false"/>
+        <property key="can.run.timers.while.stopped" value="false"/>
+        <property key="can.supply.power" value="true"/>
+        <property key="communication.has.no.atdf" value="true"/>
+        <property key="communication.interface.has.avr32jtag" value="false"/>
+        <property key="communication.interface.has.dw" value="false"/>
+        <property key="communication.interface.has.hvpp" value="false"/>
+        <property key="communication.interface.has.hvsp" value="false"/>
+        <property key="communication.interface.has.isp" value="false"/>
+        <property key="communication.interface.has.megajtag" value="false"/>
+        <property key="communication.interface.has.no.clock" value="true"/>
+        <property key="communication.interface.has.pdi" value="false"/>
+        <property key="communication.interface.has.samjtag" value="false"/>
+        <property key="communication.interface.has.swd" value="false"/>
+        <property key="communication.interface.has.tpi" value="false"/>
+        <property key="communication.interface.has.updi" value="false"/>
+        <property key="communication.interface.has.xmegajtag" value="false"/>
+        <property key="daytona.hastrace" value="false"/>
+        <property key="firmwarepage.supporttoolpacks" value="true"/>
+        <property key="has.risky.configs" value="false"/>
+        <property key="hasSecureSegment" value="false"/>
+        <property key="hwtoolclock.show.instruction.speed" value="true"/>
+        <property key="hwtoolclock.show.tab" value="true"/>
+        <property key="hwtoolclock.supportsfrc" value="false"/>
+        <property key="instrumentedtrace.hastrace" value="true"/>
+        <property key="isHighVoltageMCLRSupported" value="true"/>
+        <property key="isSWBPSupported" value="false"/>
+        <property key="isSimultaneousDebugSupported" value="false"/>
+        <property key="memories.always.autoselect" value="false"/>
+        <property key="memories.aux.exists" value="false"/>
+        <property key="memories.bootflash.exists" value="false"/>
+        <property key="memories.calmem.exists" value="false"/>
+        <property key="memories.canpreserve.dataflash" value="false"/>
+        <property key="memories.configurationmemory.exists" value="true"/>
+        <property key="memories.configurationmemory2.exists" value="false"/>
+        <property key="memories.dataflash.exists" value="false"/>
+        <property key="memories.eedata.default" value="310000-3103ff"/>
+        <property key="memories.eeprom.boundary" value="0x1"/>
+        <property key="memories.eeprom.exists" value="true"/>
+        <property key="memories.flashdata.exists" value="false"/>
+        <property key="memories.id.exists" value="true"/>
+        <property key="memories.otpconfigs.exists" value="false"/>
+        <property key="memories.programmemory.boundary" value="0x1"/>
+        <property key="memories.programmemory.end.value" value="0x1ffff"/>
+        <property key="memories.programmemory.partition2.exists" value="false"/>
+        <property key="memories.programmemory.range.string" value="0-1ffff"/>
+        <property key="memories.programmemory.ranges.default" value="0-1ffff"/>
+        <property key="memories.programmemory.show" value="true"/>
+        <property key="memories.programmemory.start.value" value="0x0"/>
+        <property key="memories.rww.exists" value="false"/>
+        <property key="memories.show.bootflash" value="false"/>
+        <property key="memories.userotp.exists" value="false"/>
+        <property key="poweroptions.DefaultPower" value="5.0"/>
+        <property key="poweroptions.voltagevalue.max" value="5.5"/>
+        <property key="poweroptions.voltagevalue.min" value="1.8"/>
+        <property key="programmerToGoDefaultImageName"
+                  value="pic18f47q10-cnano-eusart-hello-world-mcc_ptg"/>
+        <property key="programoptions.canpreserve.pgm" value="true"/>
+        <property key="programoptions.hashvp" value="true"/>
+        <property key="programoptions.haslvp" value="true"/>
+        <property key="programoptions.hasvppfirst" value="true"/>
+        <property key="programoptions.musterase" value="false"/>
+        <property key="programoptions.onevoltageoption" value="false"/>
+        <property key="programoptions.pgmentry.default" value="high"/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="supportsFreeze" value="true"/>
+      </nEdbgTool>
     </conf>
   </confs>
 </configurationDescriptor>
