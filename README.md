@@ -55,7 +55,7 @@ The following peripheral and clock configurations are set up using MCC Melody fo
 
  - Pin Grid View:
     - EUSART2 TX2: RD0 pin (CDC pin)
-  <br><img src="images/pin-grid-view-mcc.png" width="400">
+  <br><img src="images/pin-grid-view-mcc.png" width="800">
 
 The following pin configuration must be made for this project:
 
@@ -69,7 +69,7 @@ The following pin configuration must be made for this project:
 
 In this demo, the message `Hello World!` is sent via serial communication every 1000 ms. MPLAB® X Data Visualizer is used as a terminal to see the output message.
 
-![Demo in MPLABX Data Visualizer](./images/demo.png)>
+<br><img src="images/demo.png" width="1000">
 
 ## 3. Summary
 
