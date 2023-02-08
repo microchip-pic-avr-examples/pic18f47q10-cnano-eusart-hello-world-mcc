@@ -2,11 +2,11 @@
 
 # Sending "Hello World" Message via EUSART using the PIC18F47Q10 Microcontroller with MCC Melody
 
-This example shows how to send a string message through the EUSART peripheral from the PIC18F47Q10 microcontroller to the PC and how tu use MPLAB® Data Visualizer to see it.
+This example shows how to send a string of messages through the EUSART peripheral from the PIC18F47Q10 microcontroller (MCU) to the PC and use MPLAB® Data Visualizer to see it.
 
 ## Related Documentation
 
-- [TB3282 - Getting Started with UART using EUSART on PIC18](https://www.microchip.com/wwwappnotes/appnotes.aspx?appnote=en1003086)
+- [Getting Started with UART using EUSART on PIC18](https://www.microchip.com/wwwappnotes/appnotes.aspx?appnote=en1003086)
 - [PIC18-Q10 Product Family Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family)
 - [PIC18F47Q10 Data Sheet](http://ww1.microchip.com/downloads/en/DeviceDoc/40002043D.pdf)
 - [PIC18F47Q10 Code Examples on GitHub](https://github.com/microchip-pic-avr-examples?q=pic18f47q10)
@@ -67,13 +67,13 @@ The following pin configuration must be made for this project:
 
 ## 2. Demo
 
-In this demo, the message `Hello World!` is sent via serial communication every 1000 ms. MPLAB® X Data Visualizer is used as a terminal to see the output message.
+In this demo, the message `Hello World!` is sent via serial communication every 1000 ms. MPLAB X Data Visualizer is used as a terminal to see the output message.
 
 <br><img src="images/demo.png" width="1000">
 
 ## 3. Summary
 
-In this example the EUSART is set in the most common configuration (asynchronous operation and 8N1 message format) and "Hello World" messages are transmitted. MPLAB® X Data Visualizer is used to see the messages on the PC.
+In this example, EUSART most common configuration is used (asynchronous operation and 8N1 message format), and "Hello World" messages are transmitted. MPLAB X Data Visualizer is used to see the messages on the PC.
 
 ##  How to Program the Curiosity Nano board
 
