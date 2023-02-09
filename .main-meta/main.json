@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f47q10-cnano-eusart-hello-world-mcc",
-        "version": "2.0.3",
+        "version": "2.0.4",
         "displayName": "Sending Hello World Message via EUSART using the PIC18F47Q10 Microcontroller with MCC Melody",
         "projectName": "pic18f47q10-cnano-eusart-hello-world-mcc",
         "shortDescription": "This example shows how to send a string of messages through the EUSART peripheral from the PIC18F47Q10 microcontroller (MCU) to the PC and use MPLAB® Data Visualizer to see it.",
