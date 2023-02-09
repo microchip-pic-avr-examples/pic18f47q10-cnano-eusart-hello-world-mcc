@@ -178,6 +178,75 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
+      <Tool>
+        <property key="Instructiontrace.is.present" value="false"/>
+        <property key="arm.selected" value="false"/>
+        <property key="can.run.timers.while.stopped" value="false"/>
+        <property key="can.supply.power" value="true"/>
+        <property key="communication.has.no.atdf" value="true"/>
+        <property key="communication.interface.has.avr32jtag" value="false"/>
+        <property key="communication.interface.has.dw" value="false"/>
+        <property key="communication.interface.has.hvpp" value="false"/>
+        <property key="communication.interface.has.hvsp" value="false"/>
+        <property key="communication.interface.has.isp" value="false"/>
+        <property key="communication.interface.has.megajtag" value="false"/>
+        <property key="communication.interface.has.no.clock" value="true"/>
+        <property key="communication.interface.has.pdi" value="false"/>
+        <property key="communication.interface.has.samjtag" value="false"/>
+        <property key="communication.interface.has.swd" value="false"/>
+        <property key="communication.interface.has.tpi" value="false"/>
+        <property key="communication.interface.has.updi" value="false"/>
+        <property key="communication.interface.has.xmegajtag" value="false"/>
+        <property key="daytona.hastrace" value="false"/>
+        <property key="firmwarepage.supporttoolpacks" value="true"/>
+        <property key="has.risky.configs" value="false"/>
+        <property key="hasSecureSegment" value="false"/>
+        <property key="hwtoolclock.show.instruction.speed" value="true"/>
+        <property key="hwtoolclock.show.tab" value="true"/>
+        <property key="hwtoolclock.supportsfrc" value="false"/>
+        <property key="instrumentedtrace.hastrace" value="true"/>
+        <property key="isHighVoltageMCLRSupported" value="true"/>
+        <property key="isSWBPSupported" value="false"/>
+        <property key="isSimultaneousDebugSupported" value="false"/>
+        <property key="memories.always.autoselect" value="false"/>
+        <property key="memories.aux.exists" value="false"/>
+        <property key="memories.bootflash.exists" value="false"/>
+        <property key="memories.calmem.exists" value="false"/>
+        <property key="memories.canpreserve.dataflash" value="false"/>
+        <property key="memories.configurationmemory.exists" value="true"/>
+        <property key="memories.configurationmemory2.exists" value="false"/>
+        <property key="memories.dataflash.exists" value="false"/>
+        <property key="memories.eedata.default" value="310000-3103ff"/>
+        <property key="memories.eeprom.boundary" value="0x1"/>
+        <property key="memories.eeprom.exists" value="true"/>
+        <property key="memories.flashdata.exists" value="false"/>
+        <property key="memories.id.exists" value="true"/>
+        <property key="memories.otpconfigs.exists" value="false"/>
+        <property key="memories.programmemory.boundary" value="0x1"/>
+        <property key="memories.programmemory.end.value" value="0x1ffff"/>
+        <property key="memories.programmemory.partition2.exists" value="false"/>
+        <property key="memories.programmemory.range.string" value="0-1ffff"/>
+        <property key="memories.programmemory.ranges.default" value="0-1ffff"/>
+        <property key="memories.programmemory.show" value="true"/>
+        <property key="memories.programmemory.start.value" value="0x0"/>
+        <property key="memories.rww.exists" value="false"/>
+        <property key="memories.show.bootflash" value="false"/>
+        <property key="memories.userotp.exists" value="false"/>
+        <property key="poweroptions.DefaultPower" value="5.0"/>
+        <property key="poweroptions.voltagevalue.max" value="5.5"/>
+        <property key="poweroptions.voltagevalue.min" value="1.8"/>
+        <property key="programmerToGoDefaultImageName"
+                  value="pic18f47q10-cnano-eusart-hello-world-mcc_ptg"/>
+        <property key="programoptions.canpreserve.pgm" value="true"/>
+        <property key="programoptions.hashvp" value="true"/>
+        <property key="programoptions.haslvp" value="true"/>
+        <property key="programoptions.hasvppfirst" value="true"/>
+        <property key="programoptions.musterase" value="false"/>
+        <property key="programoptions.onevoltageoption" value="false"/>
+        <property key="programoptions.pgmentry.default" value="high"/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="supportsFreeze" value="true"/>
+      </Tool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
         <property key="stack-guidance" value="false"/>
@@ -391,6 +460,75 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
+      <Tool>
+        <property key="Instructiontrace.is.present" value="false"/>
+        <property key="arm.selected" value="false"/>
+        <property key="can.run.timers.while.stopped" value="false"/>
+        <property key="can.supply.power" value="true"/>
+        <property key="communication.has.no.atdf" value="true"/>
+        <property key="communication.interface.has.avr32jtag" value="false"/>
+        <property key="communication.interface.has.dw" value="false"/>
+        <property key="communication.interface.has.hvpp" value="false"/>
+        <property key="communication.interface.has.hvsp" value="false"/>
+        <property key="communication.interface.has.isp" value="false"/>
+        <property key="communication.interface.has.megajtag" value="false"/>
+        <property key="communication.interface.has.no.clock" value="true"/>
+        <property key="communication.interface.has.pdi" value="false"/>
+        <property key="communication.interface.has.samjtag" value="false"/>
+        <property key="communication.interface.has.swd" value="false"/>
+        <property key="communication.interface.has.tpi" value="false"/>
+        <property key="communication.interface.has.updi" value="false"/>
+        <property key="communication.interface.has.xmegajtag" value="false"/>
+        <property key="daytona.hastrace" value="false"/>
+        <property key="firmwarepage.supporttoolpacks" value="true"/>
+        <property key="has.risky.configs" value="false"/>
+        <property key="hasSecureSegment" value="false"/>
+        <property key="hwtoolclock.show.instruction.speed" value="true"/>
+        <property key="hwtoolclock.show.tab" value="true"/>
+        <property key="hwtoolclock.supportsfrc" value="false"/>
+        <property key="instrumentedtrace.hastrace" value="true"/>
+        <property key="isHighVoltageMCLRSupported" value="true"/>
+        <property key="isSWBPSupported" value="false"/>
+        <property key="isSimultaneousDebugSupported" value="false"/>
+        <property key="memories.always.autoselect" value="false"/>
+        <property key="memories.aux.exists" value="false"/>
+        <property key="memories.bootflash.exists" value="false"/>
+        <property key="memories.calmem.exists" value="false"/>
+        <property key="memories.canpreserve.dataflash" value="false"/>
+        <property key="memories.configurationmemory.exists" value="true"/>
+        <property key="memories.configurationmemory2.exists" value="false"/>
+        <property key="memories.dataflash.exists" value="false"/>
+        <property key="memories.eedata.default" value="310000-3103ff"/>
+        <property key="memories.eeprom.boundary" value="0x1"/>
+        <property key="memories.eeprom.exists" value="true"/>
+        <property key="memories.flashdata.exists" value="false"/>
+        <property key="memories.id.exists" value="true"/>
+        <property key="memories.otpconfigs.exists" value="false"/>
+        <property key="memories.programmemory.boundary" value="0x1"/>
+        <property key="memories.programmemory.end.value" value="0x1ffff"/>
+        <property key="memories.programmemory.partition2.exists" value="false"/>
+        <property key="memories.programmemory.range.string" value="0-1ffff"/>
+        <property key="memories.programmemory.ranges.default" value="0-1ffff"/>
+        <property key="memories.programmemory.show" value="true"/>
+        <property key="memories.programmemory.start.value" value="0x0"/>
+        <property key="memories.rww.exists" value="false"/>
+        <property key="memories.show.bootflash" value="false"/>
+        <property key="memories.userotp.exists" value="false"/>
+        <property key="poweroptions.DefaultPower" value="5.0"/>
+        <property key="poweroptions.voltagevalue.max" value="5.5"/>
+        <property key="poweroptions.voltagevalue.min" value="1.8"/>
+        <property key="programmerToGoDefaultImageName"
+                  value="pic18f47q10-cnano-eusart-hello-world-mcc_ptg"/>
+        <property key="programoptions.canpreserve.pgm" value="true"/>
+        <property key="programoptions.hashvp" value="true"/>
+        <property key="programoptions.haslvp" value="true"/>
+        <property key="programoptions.hasvppfirst" value="true"/>
+        <property key="programoptions.musterase" value="false"/>
+        <property key="programoptions.onevoltageoption" value="false"/>
+        <property key="programoptions.pgmentry.default" value="high"/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="supportsFreeze" value="true"/>
+      </Tool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
         <property key="stack-guidance" value="false"/>
